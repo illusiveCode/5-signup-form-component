@@ -8,10 +8,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
-  <body>
-    <main class="container">
+  <body class="">
+    <main class="container even-columns">
       <div class="text-area">
         <h1>Learn to code by watching others</h1>
 
@@ -20,24 +26,25 @@
           great, but understanding how developers think is invaluable.
         </p>
       </div>
+      <div>
+        <div class="cta |">
+          <p><span class="semi-bold">Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
 
-      <div class="form-area">
-        <form action="submit">
-          <div class="cta |">
-            <p><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p>
-          </div>
+        <div class="form-area">
+          <form action="">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+            <input type="email" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
 
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-          <input type="email" placeholder="Email Address" />
-          <input type="password" placeholder="Password" />
+            <button class="claim-button">Claim your free trial</button>
 
-          <button class="claim-button">Claim your free trial</button>
-
-          <small
-            >By clicking the button, you are agreeing to our <span>Terms and Services</span></small
-          >
-        </form>
+            <p class="terms-text">
+              By clicking the button, you are agreeing to our <span>Terms and Services</span>
+            </p>
+          </form>
+        </div>
       </div>
     </main>
   </body>
