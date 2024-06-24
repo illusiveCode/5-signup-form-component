@@ -5,6 +5,7 @@
   --clr-primary-400: hsl(154 59% 51%);
 
   --clr-accent-600: hsl(248 32% 49%);
+  --clr-accent-400: hsl(154 59% 70%);
 
   --clr-neutral-800: hsl(249 10% 26%);
   --clr-neutral-600: hsl(246 25% 77%);
@@ -109,14 +110,39 @@ form {
     justify-content: center;
     align-items: center;
     padding: 1.2rem;
-    margin-bottom: var(--size-400);
     border-radius: var(--size-100);
     font-weight: var(--fw-medium);
     width: 100%;
   }
 
+  .parent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: end;
+    position: relative;
+    margin-bottom: 1.2rem;
+  }
+  .error-message-1,
+  .error-message-2,
+  .error-message-3,
+  .error-message-4 {
+    font-style: italic;
+    font-weight: var(--fw-medium);
+    color: var(--clr-primary-500);
+    font-size: var(--size-300);
+    padding-top: var(--size-100);
+    display: none;
+  }
+
+  input {
+    border: none;
+    outline: 1px solid gray;
+  }
+
   .terms-text {
     font-size: 14px;
+    padding-top: var(--size-300);
     padding-inline: var(--size-500);
     color: rgb(176, 175, 175);
     span {
@@ -126,6 +152,16 @@ form {
   }
 }
 
+.error-icon-1,
+.error-icon-2,
+.error-icon-3,
+.error-icon-4 {
+  position: absolute;
+  top: 17px;
+  right: 24px;
+  display: none;
+}
+
 .claim-button {
   background-color: var(--clr-primary-400);
   box-shadow: rgba(51, 151, 111, 0.8) 0px 3px;
@@ -133,6 +169,20 @@ form {
   color: white;
   letter-spacing: 1px;
   text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: var(--clr-accent-400);
+    transform: translateY(0.2rem);
+  }
+}
+
+/* OTHER STATES */
+input:focus {
+  outline-color: var(--clr-accent-600);
 }
 
 @media (min-width: 50em) {
@@ -140,6 +190,10 @@ form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--size-800);
+  }
+
+  form {
+    padding: var(--size-700);
   }
   .text-area {
     justify-content: center;
